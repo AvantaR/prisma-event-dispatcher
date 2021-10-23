@@ -55,29 +55,26 @@ export declare type PrismaEventDispatcherOptions = {
 
 Available prisma actions:
 
-```Typescript
-findUnique
-findMany
-findFirst
-create
-createMany
-update
-updateMany
-upsert
-delete
-deleteMany
-executeRaw
-queryRaw
-aggregate
-count
-```
+- findUnique
+- findMany
+- findFirst
+- create
+- createMany
+- update
+- updateMany
+- upsert
+- delete
+- deleteMany
+- executeRaw
+- queryRaw
+- aggregate
+- count
 
 Available when parameters:
 
-```Typescript
-before
-after
-```
+- before
+- after
+
 
 ## Emitted events
 
