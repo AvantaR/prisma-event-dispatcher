@@ -17,7 +17,7 @@ const options: PrismaEventDispatcherOptions = {
 const prisma = new PrismaClient()
 
 prisma.$use(async (params, next) => {
-  const prismaEventDisptacher = PrismaEventDispatcher.(options, eventEmitter);
+  const prismaEventDisptacher = new PrismaEventDispatcher.(options, eventEmitter);
   return prismaEventDisptacher.dispatch(params, next);
 })
 ```
@@ -74,7 +74,6 @@ Available when parameters:
 
 - before
 - after
-
 
 ## Emitted events
 
