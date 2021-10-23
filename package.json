@@ -1,6 +1,6 @@
 {
   "name": "prisma-event-dispatcher",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Event Dispatcher for Prisma Models",
   "main": "dist/prisma.event.dispatcher.js",
   "scripts": {
@@ -18,11 +18,11 @@
   },
   "keywords": [
     "prisma",
-    "event",
+    "events",
     "dispatcher",
-    "orm",
-    "typescript",
-    "javascript"
+    "eventemitter",
+    "eventsdispatcher",
+    "orm"
   ],
   "files": [
     "dist/**/*"
