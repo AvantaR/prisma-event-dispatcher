@@ -18,7 +18,7 @@ const prisma = new PrismaClient()
 
 prisma.$use(async (params, next) => {
   const prismaEventDisptacher = new PrismaEventDispatcher.(options, eventEmitter);
-  return prismaEventDisptacher.dispatch(params, next);
+  return await prismaEventDisptacher.dispatch(params, next);
 })
 ```
 
