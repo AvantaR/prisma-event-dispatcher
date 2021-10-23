@@ -1,0 +1,42 @@
+{
+  "name": "prisma-event-dispatcher",
+  "version": "1.0.2",
+  "description": "Event Dispatcher for Prisma Models",
+  "main": "dist/prisma.event.dispatcher.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvantaR/prisma-event-dispatcher.git"
+  },
+  "keywords": [
+    "prisma",
+    "event",
+    "dispatcher",
+    "orm",
+    "typescript",
+    "javascript"
+  ],
+  "files": [
+    "dist/**/*"
+  ],
+  "author": "Krzysztof Szala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AvantaR/prisma-event-dispatcher/issues"
+  },
+  "homepage": "https://github.com/AvantaR/prisma-event-dispatcher#readme",
+  "devDependencies": {
+    "prettier": "^2.4.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.4.4"
+  }
+}
