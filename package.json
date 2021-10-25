@@ -11,7 +11,7 @@
     "prepublishOnly": "yarn lint",
     "version": "yarn format && git add -A src",
     "postversion": "git push && git push --tags",
-    "postinstall": "cp ../.prisma/client/index.d.ts ./dist/prisma.types.d.ts"
+    "postinstall": "echo \"export { Prisma } from '.prisma/client'\" > ./dist/prisma.types.d.ts"
   },
   "repository": {
     "type": "git",
