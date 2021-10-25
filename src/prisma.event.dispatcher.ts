@@ -1,3 +1,5 @@
+import { Modelname } from 'prisma.types';
+
 export interface EventEmitter {
   emit(event: symbol | string, ...values: any[]): boolean;
 }
@@ -5,7 +7,7 @@ export interface EventEmitter {
 export interface PrismaEventDispatcher {}
 
 export type PrismaEventDispatcherOptions = {
-  models?: string[];
+  models?: Modelname[];
   actions?: PrismaAction[];
   when?: When[];
 };
