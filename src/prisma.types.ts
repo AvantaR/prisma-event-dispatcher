@@ -1,1 +1,3 @@
-export type Modelname = string;
+export namespace Prisma {
+  export type Modelname = string;
+}
