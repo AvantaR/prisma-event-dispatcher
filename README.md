@@ -162,7 +162,7 @@ async testUpdated(payload: any, response: any) {
 Prisma Event Dispatcher is EventEmitter agnostic. It means you can use any NodeJS EventEmitter which implements `emit` method:
 
 ```Typescript
-export interface EventEmmiter {
+export interface EventEmitter {
     emit(event: symbol | string, ...values: any[]): boolean;
 }
 ```
