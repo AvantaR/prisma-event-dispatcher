@@ -1,4 +1,4 @@
-export interface EventEmmiter {
+export interface EventEmitter {
   emit(event: symbol | string, ...values: any[]): boolean;
 }
 
@@ -44,9 +44,9 @@ const When = {
 } as const;
 
 export class PrismaEventDispatcher {
-  constructor(private options: PrismaEventDispatcherOptions, private emitter: EventEmmiter) {}
+  constructor(private options: PrismaEventDispatcherOptions, private emitter: EventEmitter) {}
 
-  static setup(options: PrismaEventDispatcherOptions, emitter: EventEmmiter): PrismaEventDispatcher {
+  static setup(options: PrismaEventDispatcherOptions, emitter: EventEmitter): PrismaEventDispatcher {
     return new PrismaEventDispatcher(options, emitter);
   }
 

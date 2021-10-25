@@ -1,5 +1,7 @@
 # Prisma Event Dispatcher
 
+![npm](https://img.shields.io/npm/v/prisma-event-dispatcher)
+
 Prisma Event Dispatcher is Prisma compatible middleware, which dispatches several types of events while working with Prisma models. It's EventEmitter agnostic and allows you to choose for what kind of models, actions and moment of lifecycle to emit the events.
 
 ## How to use it
@@ -35,7 +37,7 @@ const options: PrismaEventDispatcherOptions = {
 const prisma = new PrismaClient()
 
 prisma.$use(async (params, next) => {
-  return await PrismaEventDispatcher.setup(options, this.eventEmmiter).dispatch(params, next);
+  return await PrismaEventDispatcher.setup(options, this.eventEmitter).dispatch(params, next);
 })
 ```
 
@@ -119,6 +121,10 @@ import { PrismaEventDispatcher } from 'prisma-event-dispatcher';
 export class PrismaService extends PrismaClient implements OnModuleInit {
   constructor(private eventEmmiter: EventEmitter2) {
     super();
+
+    const options = {
+      models: ['User']
+    }
 
     this.$use(async (params, next) => {
       return await PrismaEventDispatcher.setup(options, this.eventEmmiter).dispatch(params, next);
