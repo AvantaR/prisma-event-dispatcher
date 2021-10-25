@@ -7,7 +7,7 @@ export interface EventEmitter {
 export interface PrismaEventDispatcher {}
 
 export type PrismaEventDispatcherOptions = {
-  models?: Prisma.Modelname[];
+  models?: Prisma.ModelName[];
   actions?: PrismaAction[];
   when?: When[];
 };
