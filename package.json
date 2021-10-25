@@ -1,6 +1,6 @@
 {
   "name": "prisma-event-dispatcher",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Event Dispatcher for Prisma Models",
   "main": "dist/prisma.event.dispatcher.js",
   "scripts": {
