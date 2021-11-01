@@ -12,7 +12,7 @@
     "version": "yarn format && git add -A src",
     "postversion": "git push && git push --tags",
     "postinstall": "echo \"export { Prisma } from '.prisma/client'\" > ./dist/prisma.types.d.ts",
-    "test": "tap --ts --coverage-report=clover",
+    "test": "tap --ts --coverage-report=json",
     "posttest": "codecov --disable=gcov"
   },
   "repository": {
