@@ -4,8 +4,6 @@ export interface EventEmitter {
   emit(event: symbol | string, ...values: any[]): boolean;
 }
 
-export interface PrismaEventDispatcher {}
-
 export type PrismaEventDispatcherOptions = {
   models?: Prisma.ModelName[];
   actions?: PrismaAction[];
@@ -54,7 +52,7 @@ export class PrismaEventDispatcher {
 
   async dispatch(params: MiddlewareParams, next: NextMiddleware): Promise<NextMiddleware> {
     if (!params.model) return await next(params);
-    if (this.options.models && !this.options.models?.includes(params.model)) return await next(params);
+    if (this.options.models && !this.options.models.includes(params.model)) return await next(params);
     if (this.options.actions && !this.options.actions.includes(params.action)) return await next(params);
 
     if (!this.options.when || (this.options.when && this.options.when.includes(When.Before))) {
