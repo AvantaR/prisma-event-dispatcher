@@ -12,8 +12,8 @@
     "version": "yarn format && git add -A src",
     "postversion": "git push && git push --tags",
     "postinstall": "echo \"export { Prisma } from '.prisma/client'\" > ./dist/prisma.types.d.ts",
-    "test": "tap --ts",
-    "posttest": "tap --coverage-report=clover | codecov --disable=gcov"
+    "test": "tap --ts --coverage-report=clover",
+    "posttest": "codecov --disable=gcov"
   },
   "repository": {
     "type": "git",
