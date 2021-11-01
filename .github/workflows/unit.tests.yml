@@ -15,5 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: yarn install --ignore-scripts
-      - run: yarn test
-      - run: cat coverage/coverage-final.json
+      - run: yarn test | cat coverage/coverage-final.json
