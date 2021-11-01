@@ -1,6 +1,7 @@
 # Prisma Event Dispatcher
 
 ![npm](https://img.shields.io/npm/v/prisma-event-dispatcher)
+![](https://github.com/AvantaR/prisma-event-dispatcher/actions/workflows/unit.tests.yml/badge.svg)
 
 Prisma Event Dispatcher is Prisma compatible middleware, which dispatches several types of events while working with Prisma models. It's EventEmitter agnostic and allows you to choose for what kind of models, actions and moment of lifecycle to emit the events.
 
