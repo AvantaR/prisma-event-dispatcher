@@ -1,3 +1,5 @@
+
+
 # Prisma Event Dispatcher
 
 ![npm](https://img.shields.io/npm/v/prisma-event-dispatcher)
@@ -20,7 +22,7 @@ const options: PrismaEventDispatcherOptions = {
 const prisma = new PrismaClient()
 
 prisma.$use(async (params, next) => {
-  const prismaEventDisptacher = new PrismaEventDispatcher.(options, eventEmitter);
+  const prismaEventDisptacher = new PrismaEventDispatcher(options, eventEmitter);
   return await prismaEventDisptacher.dispatch(params, next);
 })
 ```
